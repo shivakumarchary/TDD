@@ -1,49 +1,50 @@
-import java.util.Arrays;
-
 public class StringMethods {
 
-    String s="";
 //Swap the last two Characters in a string
     String lastTwoCars(String str) {
-        char[] ss=str.toCharArray();
-        if (str.length() == 1)
+
+        if (str.length() == 1 || str.length() == 0) {
             return str;
-        if(str.length()  == 2) {
-            int n=str.length();
-            s+=ss[n-1];
-            s+=ss[0];
-            return s;
         }
-        if(str.length() > 2){
-            char strArray[] = str.toCharArray();
-            char temp = strArray[ str.length() - 1 ];
-            strArray[strArray.length - 1] = strArray[ strArray.length - 2];
-            strArray[ strArray.length - 2] = temp;
 
-            String stringWithLastTwoCharactersSwapped = new String(strArray);
-
-            return stringWithLastTwoCharactersSwapped;
+        else {
+            return getStringWithLastTwoCharactersSwapped(str);
         }
-        return "";
     }
-    //Check given string is polindrome or not
-    int palindromeOrNot(String s)
+
+    private static String getStringWithLastTwoCharactersSwapped(String str) {
+        char[] strArray = str.toCharArray();
+        char temp = strArray[ str.length() - 1 ];
+        strArray[ strArray.length - 1 ] = strArray[ strArray.length - 2 ];
+        strArray[ strArray.length - 2 ] = temp;
+
+        return new String(strArray);
+    }
+
+    //    Check given string is palindrome or not(
+//Returns  -1 when empty; 1 when single char; 10 when palindrome; 0 when not palindrome
+    int palindromeOrNot(String inputString)
     {
-        if(s=="")
+        if(inputString.isEmpty()) {
             return -1;
-        if(s.length() == 1) {
+        }
+        if(inputString.length() == 1) {
              return 1;
         }
 
-        StringBuilder outputString = new StringBuilder(s);
-        outputString.reverse();
-        String reversedString = outputString.toString();
+        String reversedString = getReversedString(inputString);
 
-        if( reversedString.equals(s)){
+        if( reversedString.equals(inputString)){
             return 10;
         }
         else {
             return 0;
         }
+    }
+
+    private static String getReversedString(String inputString) {
+        StringBuilder outputString = new StringBuilder(inputString);
+        outputString.reverse();
+        return outputString.toString();
     }
 }

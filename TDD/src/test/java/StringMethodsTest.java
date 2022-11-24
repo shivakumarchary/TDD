@@ -1,7 +1,6 @@
-import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
-import static org.junit.jupiter.api.Assertions.*;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 class StringMethodsTest {
 
@@ -39,7 +38,7 @@ class StringMethodsTest {
 
     }
     @Test
-    void should_return_reverseStringWithEmptyString(){
+    void should_return_emptyStringWhenEmptyStringGiven(){
        // StringMethods temp = new StringMethods();
 
         String actual = temp.lastTwoCars("");
@@ -69,7 +68,7 @@ class StringMethodsTest {
     }
 
     @Test
-    void should_return_10whenStringLengthisGreaterThan1(){
+    void should_return_10whenStringLengthisGreaterThan1AndPalindrome(){
         int expected = 10;
         int actual =temp.palindromeOrNot("abbba");
         assertEquals(expected, actual);
