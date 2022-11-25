@@ -1,12 +1,17 @@
 import org.junit.jupiter.api.Test;
 
-import static org.junit.jupiter.api.Assertions.*;
+import static org.junit.jupiter.api.Assertions.assertEquals;
+
+import Number.ArabicToRomanConvertor;
 
 class ArabicToRomanTest {
+
+    ArabicToRomanConvertor t = new ArabicToRomanConvertor();
+
     @Test
     void should_return_Ifor1()
     {
-        ArabicToRoman t=new ArabicToRoman();
+        ArabicToRomanConvertor t=new ArabicToRomanConvertor();
         String actual=t.convertArabicToRoman(1);
         String expected="I";
         assertEquals(actual,expected);
@@ -14,7 +19,7 @@ class ArabicToRomanTest {
     @Test
     void should_return_IIfor2()
     {
-        ArabicToRoman t=new ArabicToRoman();
+        ArabicToRomanConvertor t=new ArabicToRomanConvertor();
         String actual=t.convertArabicToRoman(2);
         String expected="II";
         assertEquals(actual,expected);
@@ -22,7 +27,6 @@ class ArabicToRomanTest {
 
     @Test
     void should_return_IIIfor3(){
-        ArabicToRoman t = new ArabicToRoman();
 
         String actual = t.convertArabicToRoman(3);
         String expected = "III";
@@ -31,7 +35,6 @@ class ArabicToRomanTest {
     }
     @Test
     void should_return_IVfor4(){
-        ArabicToRoman t = new ArabicToRoman();
 
         String actual = t.convertArabicToRoman(4);
         String expected = "IV";
@@ -40,7 +43,6 @@ class ArabicToRomanTest {
     }
     @Test
     void should_return_Vfor5(){
-        ArabicToRoman t = new ArabicToRoman();
 
         String actual = t.convertArabicToRoman(5);
         String expected = "V";
@@ -49,7 +51,6 @@ class ArabicToRomanTest {
     }
     @Test
     void should_return_VIIIfor8(){
-        ArabicToRoman t = new ArabicToRoman();
 
         String actual = t.convertArabicToRoman(8);
         String expected = "VIII";
@@ -59,7 +60,6 @@ class ArabicToRomanTest {
 
     @Test
     void should_return_XVfor15(){
-        ArabicToRoman t = new ArabicToRoman();
 
         String actual = t.convertArabicToRoman(15);
         String expected ="XV";
@@ -68,7 +68,6 @@ class ArabicToRomanTest {
     }
     @Test
     void should_return_XVIfor16(){
-        ArabicToRoman t = new ArabicToRoman();
 
         String actual = t.convertArabicToRoman(16);
         String expected ="XVI";
@@ -77,7 +76,6 @@ class ArabicToRomanTest {
     }
     @Test
     void should_return_XXfor20(){
-        ArabicToRoman t = new ArabicToRoman();
 
         String actual = t.convertArabicToRoman(20);
         String expected ="XX";
@@ -86,7 +84,6 @@ class ArabicToRomanTest {
     }
     @Test
     void should_return_XLfor40() {
-        ArabicToRoman t = new ArabicToRoman();
 
         String actual = t.convertArabicToRoman(40);
         String expected = "XL";
@@ -95,7 +92,6 @@ class ArabicToRomanTest {
     }
     @Test
     void should_return_Lfor50() {
-        ArabicToRoman t = new ArabicToRoman();
 
         String actual = t.convertArabicToRoman(50);
         String expected = "L";
@@ -104,7 +100,6 @@ class ArabicToRomanTest {
     }
     @Test
     void should_return_XCfor90() {
-        ArabicToRoman t = new ArabicToRoman();
 
         String actual = t.convertArabicToRoman(90);
         String expected = "XC";
@@ -113,7 +108,6 @@ class ArabicToRomanTest {
     }
     @Test
     void should_return_Cfor100() {
-        ArabicToRoman t = new ArabicToRoman();
 
         String actual = t.convertArabicToRoman(100);
         String expected = "C";
