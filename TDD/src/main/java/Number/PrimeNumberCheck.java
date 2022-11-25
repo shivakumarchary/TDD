@@ -1,3 +1,5 @@
+package Number;
+
 public class PrimeNumberCheck implements NumberMethods {
     @Override
     public boolean checkPrimeOrNot(int n)

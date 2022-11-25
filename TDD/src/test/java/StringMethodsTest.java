@@ -1,6 +1,7 @@
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
+import String.StringMethodsImpl;
 
 class StringMethodsTest {
 
@@ -8,7 +9,7 @@ class StringMethodsTest {
 
     @Test
     void should_return_sameStringWhenOneCharacterGiven(){
-        //StringMethods temp = new StringMethods();
+        //String.StringMethods temp = new String.StringMethods();
 
         String actual = temp.lastTwoCars("a");
         String expected = "a";
@@ -18,7 +19,7 @@ class StringMethodsTest {
 
     @Test
     void should_Return_reversedStringWhenTwoCharactersGiven(){
-        //StringMethods temp = new StringMethods();
+        //String.StringMethods temp = new String.StringMethods();
 
         String actual = temp.lastTwoCars("TI");
         String expected = "IT";
@@ -30,7 +31,7 @@ class StringMethodsTest {
 
     @Test
     void should_return_reversedStringWIthMorethanTwoChars(){
-       // StringMethods temp = new StringMethods();
+       // String.StringMethods temp = new String.StringMethods();
 
         String actual = temp.lastTwoCars("FORD");
         String expected = "FODR";
@@ -39,7 +40,7 @@ class StringMethodsTest {
     }
     @Test
     void should_return_emptyStringWhenEmptyStringGiven(){
-       // StringMethods temp = new StringMethods();
+       // String.StringMethods temp = new String.StringMethods();
 
         String actual = temp.lastTwoCars("");
         String expected = "";

@@ -1,3 +1,5 @@
+package String;
+
 public interface StringMethods {
     //Swap the last two Characters in a string
     String lastTwoCars(String str);

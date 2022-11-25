@@ -1,6 +1,7 @@
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
+import Number.PrimeNumberCheck;
 
 class PrimeNumberCheckTest {
         PrimeNumberCheck temp = new PrimeNumberCheck();

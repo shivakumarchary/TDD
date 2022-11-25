@@ -1,3 +1,5 @@
+package String;
+
 public class StringMethodsImpl implements StringMethods {
 
 //Swap the last two Characters in a string
