@@ -2,13 +2,14 @@ package Number;
 
 public class PrimeNumberCheck implements NumberMethods {
     @Override
-    public boolean checkPrimeOrNot(int n)
+    public boolean checkPrimeOrNot(int numberToCheck)
     {
         boolean flag = false;
-        if(n==1)
+        if( numberToCheck == 1 ){
             return false;
-        for (int i=2;i<=n/2;i++) {
-            if(n % i == 0) {
+        }
+        for (int i=2;i<=numberToCheck/2;i++) {
+            if( numberToCheck % i == 0 ) {
                 flag = true;
                 break;
             }

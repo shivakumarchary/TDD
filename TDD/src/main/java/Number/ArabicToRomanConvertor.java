@@ -6,49 +6,49 @@ public class ArabicToRomanConvertor implements Convertor {
     private static final int[] DECIMAL_EQUIVALENTS = {100,90,50,40,10,5,4,1};
 
     @Override
-    public String convertArabicToRoman(int A) {
+    public String convertArabicToRoman(int arabicNumber) {
 
-        StringBuilder r = new StringBuilder();
-
-        /*if (A == 1) {
-            r += "I";
-        }
-
-        if (A == 2) {
-            r += "II";
-        }
-        if (A == 3) {
-            r += "III";
-        }*/
+        StringBuilder romanString = new StringBuilder();
 
         for (int index = 0; index < ROMAN_CHARACTERS.length; index++){
 
-            while(A >= DECIMAL_EQUIVALENTS[index]){
-                r.append(ROMAN_CHARACTERS[index]);
-                A -= DECIMAL_EQUIVALENTS[index];
+            while(arabicNumber >= DECIMAL_EQUIVALENTS[index]){
+                romanString.append(ROMAN_CHARACTERS[index]);
+                arabicNumber -= DECIMAL_EQUIVALENTS[index];
             }
 
         }
+        return romanString.toString();
 
-        /*for(;A>=10;A-=10) {
-             if (A >= 10) {
-                 r += "X";
+        /*if (arabicNumber == 1) {
+            romanString += "I";
+        }
+
+        if (arabicNumber == 2) {
+            romanString += "II";
+        }
+        if (arabicNumber == 3) {
+            romanString += "III";
+        }*/
+
+        /*for(;arabicNumber>=10;arabicNumber-=10) {
+             if (arabicNumber >= 10) {
+                 romanString += "X";
              }
 
         }
-        for(;A>=5;A-=5)
+        for(;arabicNumber>=5;arabicNumber-=5)
         {
-             if (A >= 5) {
-                 r += "V";
+             if (arabicNumber >= 5) {
+                 romanString += "V";
              }
         }
 
-        for(; A > 0; A--){
-            r += "I";
+        for(; arabicNumber > 0; arabicNumber--){
+            romanString += "I";
         }
 
 */
-        return r.toString();
     }
 
-   }
+}
