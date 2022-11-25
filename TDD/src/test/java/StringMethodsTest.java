@@ -4,7 +4,7 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 
 class StringMethodsTest {
 
-    StringMethods temp = new StringMethods();
+    StringMethodsImpl temp = new StringMethodsImpl();
 
     @Test
     void should_return_sameStringWhenOneCharacterGiven(){

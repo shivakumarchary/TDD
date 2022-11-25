@@ -4,12 +4,12 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 
 class ArabicToRomanTest {
 
-    ArabicToRoman t = new ArabicToRoman();
+    ArabicToRomanConvertor t = new ArabicToRomanConvertor();
 
     @Test
     void should_return_Ifor1()
     {
-        ArabicToRoman t=new ArabicToRoman();
+        ArabicToRomanConvertor t=new ArabicToRomanConvertor();
         String actual=t.convertArabicToRoman(1);
         String expected="I";
         assertEquals(actual,expected);
@@ -17,7 +17,7 @@ class ArabicToRomanTest {
     @Test
     void should_return_IIfor2()
     {
-        ArabicToRoman t=new ArabicToRoman();
+        ArabicToRomanConvertor t=new ArabicToRomanConvertor();
         String actual=t.convertArabicToRoman(2);
         String expected="II";
         assertEquals(actual,expected);
